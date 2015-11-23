@@ -1,0 +1,21 @@
+opam-version: "1.2"
+name: "just_chat"
+version: "0.1"
+maintainer: "Edgar Aroutiounian <edgar.factorial@gmail.com>"
+authors: [ "Edgar Aroutiounian <edgar.factorial@gmail.com>" ]
+license: "GPL-3"
+homepage: "https://github.com/fxfactorial/just-chat"
+bug-reports: "https://github.com/fxfactorial/just-chat/issues"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+build-test: [
+  ["ocaml" "setup.ml" "-configure" "--enable-tests"]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-test"]
+]
+depends: [
+  "colors_js" {build & >= "0.1.2"}
+  "ocamlfind" {build}
+]

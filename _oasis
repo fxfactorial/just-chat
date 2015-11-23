@@ -1,0 +1,26 @@
+OASISFormat: 0.4
+Name:        just_chat
+Version:     0.1
+Synopsis:    just_chat
+Authors: Edgar Aroutiounian <edgar.factorial@gmail.com>
+Maintainers: Edgar Aroutiounian <edgar.factorial@gmail.com>
+Homepage:    https://github.com/bean-code/torch-chat
+License:     GPL-3
+Plugins:     META (0.4), DevFiles (0.4)
+BuildTools: ocamlbuild
+
+PreBuildCommand: npm install
+
+PostBuildCommand: sh post_build.sh
+
+PostCleanCommand: sh post_clean.sh
+
+Description: Secure chat server application.
+
+Executable just_chat
+  Path: src
+  BuildTools:ocamlbuild
+  install: false
+  MainIs: client.ml
+  CompiledObject: byte
+  BuildDepends: colors_js
