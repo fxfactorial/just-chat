@@ -33,7 +33,6 @@ let () =
       (* This needs to be redone with Re_pcre *)
       if String.length msg > 10 then begin
         let modify = String.sub msg 0 9 in
-        print_endline modify;
         if modify = "set name:"
         then begin
           let as_string = Js.string (String.trim msg) in
