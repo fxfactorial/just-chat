@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 33cde3eaa5cbad1b0741b67b7678466e)
+# DO NOT EDIT (digest: d3ccfc9c5167a9c8b7bffa1fecdd1ac5)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -15,11 +15,7 @@ true: annot, bin_annot
 "_darcs": -traverse
 "_darcs": not_hygienic
 # Executable just_chat
-"src/client.byte": pkg_blessed
 "src/client.byte": pkg_colors_js
-"src/client.byte": pkg_re.pcre
-<src/*.ml{,i,y}>: pkg_blessed
 <src/*.ml{,i,y}>: pkg_colors_js
-<src/*.ml{,i,y}>: pkg_re.pcre
 # OASIS_STOP
 "node_modules": not_hygienic
