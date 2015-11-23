@@ -4,7 +4,6 @@ module U = Yojson.Basic.Util
 
 let (multicast_addr, bind_addr, port) = "224.1.1.1", "0.0.0.0", 6811
 
-
 let () =
   Random.self_init ();
   let p = new process in

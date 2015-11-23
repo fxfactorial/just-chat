@@ -6,9 +6,18 @@
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
 #+OPTIONS:  toc:nil num:0
 
-This is a repo showing a real use-case of ocaml-nodejs.
+This is a chat application on the local network. No configuration
+needed, just type 
 
+~node client.js~
 
-Implementing this p2p application:
+and start typing. Anyone else that also does 
+~node client.js~ 
 
-http://mafintosh.github.io/p2p-workshop/build/01.html
+will be able to talk as well.
+
+This works by sending multicasting messages over UDP.
+
+* Etc Written in OCaml, compiled to JS. 
+To actually compile this project you'll need my ~ocaml-nodejs~
+bindings.
